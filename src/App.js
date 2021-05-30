@@ -1,31 +1,27 @@
 import "./App.css";
 import { useState } from "react";
 import Message from "./components/message";
+import Messages from "./config/message";
 
 function App() {
-  const [message, setMessage] = useState("Hello World!!!");
-  const [showMessage, setShowMessage] = useState(false);
 
-  function updateMessage() {
-    setMessage("Hello Everyone!!!");
-  }
+  // Change variables
+  // showMessage > showMessages
+  // setShowMessage > setShowMessages
+  const [showMessages, setShowMessages] = useState(false);
 
   return (
     <>
-      {showMessage && <Message message={message} />}
+      {showMessages && Messages.map((item) => {
+        return <Message message={item} />;
+      })}
+
       <button
-        onClick={(e) => {
-          setShowMessage(!showMessage);
+        onClick={() => {
+          setShowMessages(!showMessages);
         }}
       >
-        Show Message
-      </button>
-      <button
-        onClick={(e) => {
-          updateMessage(e);
-        }}
-      >
-        Update Message
+        Show Messages
       </button>
     </>
   );
