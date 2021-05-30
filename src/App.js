@@ -1,12 +1,20 @@
 import './App.css';
+import { useState } from "react"
 import Message from "./components/message";
 
 function App() {
 
-  const message = 'Hello World!!!'
+  const [message, setMessage] = useState("Hello World!!!")
+
+  function updateMessage(){
+      setMessage("Hello Everyone!!!");
+  }
 
   return (
-    <Message message={message} />
+    <>
+      <Message message={message} />
+      <button onClick={updateMessage}>Update Message</button>
+    </>
   );
 }
 
