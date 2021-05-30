@@ -2,7 +2,7 @@ const messages = [
     "Hello World!!!",
     "Hi World!!!",
     "Hello Everyone!!!",
-    "Hi Everyone!!!"
-]
+    "Hi Everyone!!!",
+];
 
-export default messages
+export default messages;
