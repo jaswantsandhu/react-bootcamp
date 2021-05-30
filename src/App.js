@@ -3,7 +3,7 @@ import Message from "./components/message";
 
 function App() {
   return (
-    <Message />
+    <Message message={'Hello World!!!'} />
   );
 }
 
